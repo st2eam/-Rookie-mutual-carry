@@ -33,6 +33,10 @@
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QVariant>
+#include <QString>
+#include <QSqlError>
+
 
 namespace Ui {
 class Guest_room_management;
@@ -46,8 +50,16 @@ public:
     explicit Guest_room_management(QWidget *parent = nullptr);
     ~Guest_room_management();
 
+private slots:
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::Guest_room_management *ui;
+    QSqlTableModel *model;
 };
 
 #endif // GUEST_ROOM_MANAGEMENT_H

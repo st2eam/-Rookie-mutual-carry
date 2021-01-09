@@ -33,6 +33,9 @@
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QVariant>
+#include <QString>
+#include <QSqlError>
 
 namespace Ui {
 class System_management;
@@ -46,8 +49,16 @@ public:
     explicit System_management(QWidget *parent = nullptr);
     ~System_management();
 
+private slots:
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::System_management *ui;
+    QSqlTableModel *model;
 };
 
 #endif // SYSTEM_MANAGEMENT_H

@@ -33,6 +33,10 @@
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QVariant>
+#include <QString>
+#include <QSqlError>
+
 
 namespace Ui {
 class Guest_management;
@@ -48,6 +52,7 @@ public:
 
 private:
     Ui::Guest_management *ui;
+    QSqlTableModel *model;
 };
 
 #endif // GUEST_MANAGEMENT_H

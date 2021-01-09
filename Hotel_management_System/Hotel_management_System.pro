@@ -32,7 +32,7 @@ SOURCES += \
     guest_room_management.cpp \
     guest_management.cpp \
     report_management.cpp \
-    consumption_management.cpp
+    consumption_management.cpp \
 
 HEADERS += \
         hotel_management_system.h \
@@ -50,9 +50,11 @@ FORMS += \
     guest_room_management.ui \
     guest_management.ui \
     report_management.ui \
-    consumption_management.ui
+    consumption_management.ui \
 
 QT += sql
+
+win32:CONFIG+=console
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

@@ -36,6 +36,13 @@ private slots:
 
 private:
     Ui::Hotel_management_System *ui;
+
+//    Basic_info *Basic_isfo;
+//    System_management *System_management;
+//    Guest_management *Guest_management;
+//    Guest_room_management *Guest_room_management;
+//    Consumption_management *Consumption_management;
+//    Report_management *Report_management;
 };
 
 #endif // HOTEL_MANAGEMENT_SYSTEM_H

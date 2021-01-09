@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QWizardPage>
 #include <QWidget>
-#include <QtDebug>
+#include <QDebug>
 #include <QApplication>
 #include <QDialog>
 #include <QLabel>
@@ -35,6 +35,9 @@
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QVariant>
+#include <QString>
+#include <QSqlError>
 
 namespace Ui {
 class Basic_info;
@@ -48,8 +51,30 @@ public:
     explicit Basic_info(QWidget *parent = nullptr);
     ~Basic_info();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_tabWidget_tabBarClicked(int index);
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::Basic_info *ui;
+    QSqlTableModel *model;
 };
 
 #endif // BASIC_INFO_H

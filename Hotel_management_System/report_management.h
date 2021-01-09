@@ -33,6 +33,10 @@
 #include <QSqlRecord>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QVariant>
+#include <QString>
+#include <QSqlError>
+
 
 namespace Ui {
 class Report_management;
@@ -48,6 +52,7 @@ public:
 
 private:
     Ui::Report_management *ui;
+    QSqlTableModel *model;
 };
 
 #endif // REPORT_MANAGEMENT_H
