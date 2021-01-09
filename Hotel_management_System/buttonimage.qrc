@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/button">
+        <file>button/1-1.png</file>
+        <file>button/1-2.png</file>
+        <file>button/2-1.png</file>
+        <file>button/2-2.png</file>
+        <file>button/3-1.png</file>
+        <file>button/3-2.png</file>
+        <file>button/4-1.png</file>
+        <file>button/4-2.png</file>
+        <file>button/5-1.png</file>
+        <file>button/5-2.png</file>
+        <file>button/6-1.png</file>
+        <file>button/6-2.png</file>
+    </qresource>
+    <qresource prefix="/image"/>
+    <qresource prefix="/">
+        <file>image/background.png</file>
+        <file>littlebutton/Add_room_type.png</file>
+        <file>littlebutton/Add_users.png</file>
+        <file>littlebutton/Adding_floor_information.png</file>
+        <file>littlebutton/Cancellation_information.png</file>
+        <file>littlebutton/Change_Room_type_information.png</file>
+        <file>littlebutton/Change_rooms.png</file>
+        <file>littlebutton/Change_the_room_information.png</file>
+        <file>littlebutton/Check.png</file>
+        <file>littlebutton/Check_in.png</file>
+        <file>littlebutton/Check_in_slip.png</file>
+        <file>littlebutton/Delet_ room_type.png</file>
+        <file>littlebutton/Delete_a_member.png</file>
+        <file>littlebutton/Delete_guest_room.png</file>
+        <file>littlebutton/Delete_the_floor_information.png</file>
+        <file>littlebutton/Delete_user.png</file>
+        <file>littlebutton/Increase_membership.png</file>
+        <file>littlebutton/Increase_Room_information.png</file>
+        <file>littlebutton/Modify_membership_information.png</file>
+        <file>littlebutton/Modify_reservation_information.png</file>
+        <file>littlebutton/Modify_user_information.png</file>
+        <file>littlebutton/Modifying_floor_information.png</file>
+        <file>littlebutton/Print.png</file>
+        <file>littlebutton/Registration.png</file>
+        <file>littlebutton/Room_reservation.png</file>
+    </qresource>
+</RCC>
