@@ -122,17 +122,17 @@ public:
     void retranslateUi(QWidget *Report_management)
     {
         Report_management->setWindowTitle(QApplication::translate("Report_management", "Report_management", nullptr));
-        pushButton_10->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_10->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Report_management", "\351\242\204\345\256\232\345\256\242\344\272\272\346\212\245\350\241\250", nullptr));
-        pushButton_11->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_11->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Report_management", "\345\205\245\344\275\217\345\256\242\344\272\272\346\212\245\350\241\250", nullptr));
-        pushButton_12->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_12->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Report_management", "\345\275\223\346\227\245\345\256\242\344\272\272\351\242\204\345\256\232\346\212\245\350\241\250", nullptr));
-        pushButton_13->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_13->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("Report_management", "\345\275\223\346\227\245\345\256\242\344\272\272\345\205\245\344\275\217\346\212\245\350\241\250", nullptr));
-        pushButton_14->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_14->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("Report_management", "\345\275\223\346\227\245\347\246\273\345\272\227\345\256\242\344\272\272\346\212\245\350\241\250", nullptr));
-        pushButton_15->setText(QApplication::translate("Report_management", "PushButton", nullptr));
+        pushButton_15->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_6), QApplication::translate("Report_management", "\345\275\223\346\227\245\350\264\242\345\212\241\350\277\233\345\270\220\346\212\245\350\241\250", nullptr));
     } // retranslateUi
 

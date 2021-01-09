@@ -48,10 +48,10 @@ public:
         pushButton_7->setGeometry(QRect(850, 170, 110, 70));
         pushButton_8 = new QPushButton(tab);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
-        pushButton_8->setGeometry(QRect(850, 410, 110, 70));
+        pushButton_8->setGeometry(QRect(850, 290, 110, 70));
         pushButton_9 = new QPushButton(tab);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
-        pushButton_9->setGeometry(QRect(850, 290, 110, 70));
+        pushButton_9->setGeometry(QRect(850, 410, 110, 70));
         tabWidget->addTab(tab, QString());
 
         retranslateUi(Guest_room_management);
@@ -65,9 +65,9 @@ public:
     void retranslateUi(QWidget *Guest_room_management)
     {
         Guest_room_management->setWindowTitle(QApplication::translate("Guest_room_management", "Form", nullptr));
-        pushButton_7->setText(QApplication::translate("Guest_room_management", "PushButton", nullptr));
-        pushButton_8->setText(QApplication::translate("Guest_room_management", "PushButton", nullptr));
-        pushButton_9->setText(QApplication::translate("Guest_room_management", "PushButton", nullptr));
+        pushButton_7->setText(QString());
+        pushButton_8->setText(QString());
+        pushButton_9->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Guest_room_management", "\345\256\242\346\210\277\344\277\241\346\201\257\347\256\241\347\220\206", nullptr));
     } // retranslateUi
 

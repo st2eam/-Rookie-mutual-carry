@@ -228,6 +228,7 @@ Makefile: ../Hotel_management_System/Hotel_management_System.pro E:/Qt5.12.0/5.1
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/resolve_config.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/exclusive_builds_post.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/default_post.prf \
+		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/console.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/qml_debug.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/precompile_header.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/warn_on.prf \
@@ -238,7 +239,6 @@ Makefile: ../Hotel_management_System/Hotel_management_System.pro E:/Qt5.12.0/5.1
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/uic.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/qmake_use.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/file_copies.prf \
-		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/windows.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/testcase_targets.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/exceptions.prf \
 		E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/yacc.prf \
@@ -247,8 +247,7 @@ Makefile: ../Hotel_management_System/Hotel_management_System.pro E:/Qt5.12.0/5.1
 		E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Widgets.prl \
 		E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Gui.prl \
 		E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Sql.prl \
-		E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Core.prl \
-		E:/Qt5.12.0/5.12.0/mingw73_64/lib/qtmaind.prl
+		E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\Hotel_management_System\Hotel_management_System.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/spec_pre.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/qdevice.pri:
@@ -417,6 +416,7 @@ E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/default_pre.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/resolve_config.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/exclusive_builds_post.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/default_post.prf:
+E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/console.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/qml_debug.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/precompile_header.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/warn_on.prf:
@@ -427,7 +427,6 @@ E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/opengl.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/uic.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/qmake_use.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/file_copies.prf:
-E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/win32/windows.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/testcase_targets.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/exceptions.prf:
 E:/Qt5.12.0/5.12.0/mingw73_64/mkspecs/features/yacc.prf:
@@ -437,7 +436,6 @@ E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Widgets.prl:
 E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Gui.prl:
 E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Sql.prl:
 E:/Qt5.12.0/5.12.0/mingw73_64/lib/Qt5Core.prl:
-E:/Qt5.12.0/5.12.0/mingw73_64/lib/qtmaind.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Hotel_management_System\Hotel_management_System.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

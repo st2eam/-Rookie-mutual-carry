@@ -125,7 +125,7 @@ public:
 
         retranslateUi(Guest_management);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Guest_management);
@@ -134,22 +134,22 @@ public:
     void retranslateUi(QWidget *Guest_management)
     {
         Guest_management->setWindowTitle(QApplication::translate("Guest_management", "Guest_management", nullptr));
-        pushButton_7->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_8->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_9->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_13->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
+        pushButton_7->setText(QString());
+        pushButton_8->setText(QString());
+        pushButton_9->setText(QString());
+        pushButton_13->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Guest_management", "\351\242\204\345\256\232\347\256\241\347\220\206", nullptr));
-        pushButton_10->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_12->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
+        pushButton_10->setText(QString());
+        pushButton_12->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Guest_management", "\351\242\204\345\256\232\350\275\254\345\205\245\344\275\217", nullptr));
-        pushButton_14->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_11->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
+        pushButton_14->setText(QString());
+        pushButton_11->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Guest_management", "\347\231\273\350\256\260\345\205\245\344\275\217", nullptr));
-        pushButton_15->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_16->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
+        pushButton_15->setText(QString());
+        pushButton_16->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("Guest_management", "\346\215\242\346\210\277\347\256\241\347\220\206", nullptr));
-        pushButton_17->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
-        pushButton_18->setText(QApplication::translate("Guest_management", "PushButton", nullptr));
+        pushButton_17->setText(QString());
+        pushButton_18->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("Guest_management", "\351\200\200\346\210\277\347\273\223\345\270\220", nullptr));
     } // retranslateUi
 

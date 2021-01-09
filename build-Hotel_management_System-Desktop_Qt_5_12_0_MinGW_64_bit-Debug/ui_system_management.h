@@ -69,9 +69,9 @@ public:
     void retranslateUi(QWidget *System_management)
     {
         System_management->setWindowTitle(QApplication::translate("System_management", "Form", nullptr));
-        pushButton_4->setText(QApplication::translate("System_management", "PushButton", nullptr));
-        pushButton_6->setText(QApplication::translate("System_management", "PushButton", nullptr));
-        pushButton_5->setText(QApplication::translate("System_management", "PushButton", nullptr));
+        pushButton_4->setText(QString());
+        pushButton_6->setText(QString());
+        pushButton_5->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("System_management", "\347\224\250\346\210\267\347\256\241\347\220\206", nullptr));
     } // retranslateUi
 
