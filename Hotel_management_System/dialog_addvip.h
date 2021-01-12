@@ -1,20 +1,20 @@
-#ifndef SYSTEM_MANAGEMENT_H
-#define SYSTEM_MANAGEMENT_H
+#ifndef DIALOG_ADDVIP_H
+#define DIALOG_ADDVIP_H
 
 #include <QMainWindow>
 #include <QWizardPage>
 #include <QWidget>
-#include <QtDebug>
-#include <QColorDialog>
-#include <QFileDialog>
-#include <QFontDialog>
-#include <QInputDialog>
+#include <QDebug>
 #include <QApplication>
 #include <QDialog>
 #include <QLabel>
 #include <QDropEvent>
 #include <QDragEnterEvent>
 #include <QDialog>
+#include <QColorDialog>
+#include <QFileDialog>
+#include <QFontDialog>
+#include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QWizardPage>
@@ -29,6 +29,8 @@
 #include <QIcon>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QStackedLayout>
+#include <QTabWidget>
 #include <QTableView>
 #include <QSqlRecord>
 #include <QSqlQueryModel>
@@ -36,31 +38,31 @@
 #include <QVariant>
 #include <QString>
 #include <QSqlError>
-#include <dialog_add.h>
-
 
 namespace Ui {
-class System_management;
+class Dialog_addvip;
 }
 
-class System_management : public QWidget
+class Dialog_addvip : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit System_management(QWidget *parent = nullptr);
-    ~System_management();
+    explicit Dialog_addvip(QWidget *parent = nullptr);
+    ~Dialog_addvip();
 
 private slots:
+    void on_pushButton_2_clicked();
+
     void on_pushButton_4_clicked();
 
     void on_pushButton_5_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_pushButton_clicked();
 
 private:
-    Ui::System_management *ui;
+    Ui::Dialog_addvip *ui;
     QSqlTableModel *model;
 };
 
-#endif // SYSTEM_MANAGEMENT_H
+#endif // DIALOG_ADDVIP_H

@@ -59,10 +59,11 @@ System_management::~System_management()
 //添加
 void System_management::on_pushButton_4_clicked()
 {
-
-    int rowindex = model->rowCount();
-    model->insertRow(rowindex);
-
+    Dialog_add d;
+    d.exec();
+    model->select();
+//    int rowindex = model->rowCount();
+//    model->insertRow(rowindex);
 }
 
 void System_management::on_pushButton_5_clicked()

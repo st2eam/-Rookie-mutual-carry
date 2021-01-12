@@ -33,6 +33,9 @@ SOURCES += \
     guest_management.cpp \
     report_management.cpp \
     consumption_management.cpp \
+    dialog_login.cpp \
+    dialog_add.cpp \
+    dialog_addvip.cpp
 
 HEADERS += \
         hotel_management_system.h \
@@ -41,7 +44,10 @@ HEADERS += \
     guest_room_management.h \
     guest_management.h \
     report_management.h \
-    consumption_management.h
+    consumption_management.h \
+    dialog_login.h \
+    dialog_add.h \
+    dialog_addvip.h
 
 FORMS += \
         hotel_management_system.ui \
@@ -51,10 +57,12 @@ FORMS += \
     guest_management.ui \
     report_management.ui \
     consumption_management.ui \
+    dialog_login.ui \
+    dialog_add.ui \
+    dialog_addvip.ui
 
 QT += sql
 
-win32:CONFIG+=console
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

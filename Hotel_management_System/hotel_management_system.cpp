@@ -24,6 +24,18 @@ Hotel_management_System::Hotel_management_System(QWidget *parent) :
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Hotel.db");
+    bool ok = db.open();
+    if(ok)
+    {
+    qDebug()<<"connect normal";
+    }
+    else
+    {
+    qDebug()<<"connect error!";
+    }
 }
 
 Hotel_management_System::~Hotel_management_System()

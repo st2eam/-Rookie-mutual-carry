@@ -50,16 +50,17 @@ Basic_info::Basic_info(QWidget *parent) :
     {
     qDebug()<<"connect error!";
     }
-
+    query_model = new QSqlQueryModel;
     //创建模型
     model = new QSqlTableModel(this);
-    model->setTable("Hotel_room");
+    model->setTable("Room_type");
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);// 设置编辑策略
     model->select(); //选取整个表的所有行
     model->setHeaderData(0,Qt::Horizontal,"房间类型");
     model->setHeaderData(1,Qt::Horizontal,"房间价格");
+    model->setHeaderData(2,Qt::Horizontal,"VIP价格");
     ui->tableView->setModel(model);
-    ui->tableView->show();
+    ui->tableView->show(); 
 }
 
 
@@ -80,6 +81,7 @@ void Basic_info::on_tabWidget_tabBarClicked(int index)
     model->select(); //选取整个表的所有行
     model->setHeaderData(0,Qt::Horizontal,"房间类型");
     model->setHeaderData(1,Qt::Horizontal,"房间价格");
+    model->setHeaderData(2,Qt::Horizontal,"VIP价格");
     ui->tableView->setModel(model);
     ui->tableView->show();
     }
@@ -193,8 +195,9 @@ void Basic_info::on_pushButton_6_clicked()
 
 void Basic_info::on_pushButton_7_clicked()
 {
-    int rowindex = model->rowCount();
-    model->insertRow(rowindex);
+    Dialog_addvip d;
+    d.exec();
+    model->select();
 }
 
 void Basic_info::on_pushButton_8_clicked()
@@ -211,15 +214,6 @@ void Basic_info::on_pushButton_8_clicked()
 
 void Basic_info::on_pushButton_9_clicked()
 {
-    int rowIndex = ui->tableView->currentIndex().row();
-    //qDebug() << rowIndex;
-    model->removeRow(rowIndex);
-    int ok = QMessageBox::warning(this,tr("删除当前行!"),tr("你确定删除当前行吗？"),
-                                 QMessageBox::Yes,QMessageBox::No);
 
-    if(ok == QMessageBox::No)
-      {
-        model->revertAll(); //如果不删除，则撤销
-      }
-    else model->submitAll(); //否则提交，在数据库中删除该行
 }
+

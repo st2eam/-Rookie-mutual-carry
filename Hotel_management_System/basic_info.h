@@ -38,6 +38,7 @@
 #include <QVariant>
 #include <QString>
 #include <QSqlError>
+#include <dialog_addvip.h>
 
 namespace Ui {
 class Basic_info;
@@ -75,6 +76,7 @@ private slots:
 private:
     Ui::Basic_info *ui;
     QSqlTableModel *model;
+    QSqlQueryModel *query_model;
 };
 
 #endif // BASIC_INFO_H
