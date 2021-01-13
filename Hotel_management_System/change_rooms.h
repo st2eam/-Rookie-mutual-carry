@@ -1,10 +1,11 @@
-#ifndef GUEST_MANAGEMENT_H
-#define GUEST_MANAGEMENT_H
+#ifndef CHANGE_ROOMS_H
+#define CHANGE_ROOMS_H
+
 
 #include <QMainWindow>
 #include <QWizardPage>
 #include <QWidget>
-#include <QtDebug>
+#include <QDebug>
 #include <QApplication>
 #include <QDialog>
 #include <QLabel>
@@ -29,6 +30,8 @@
 #include <QIcon>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QStackedLayout>
+#include <QTabWidget>
 #include <QTableView>
 #include <QSqlRecord>
 #include <QSqlQueryModel>
@@ -36,32 +39,23 @@
 #include <QVariant>
 #include <QString>
 #include <QSqlError>
-#include <settle_accounts.h>
-
-
 namespace Ui {
-class Guest_management;
+class change_rooms;
 }
 
-class Guest_management : public QWidget
+class change_rooms : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Guest_management(QWidget *parent = nullptr);
-    ~Guest_management();
-
-private slots:
-    void on_pushButton_18_clicked();
-
-    void on_tabWidget_currentChanged(int index);
-
-    void on_pushButton_16_clicked();
+    explicit change_rooms(QWidget *parent = nullptr);
+    ~change_rooms();
 
 private:
-    Ui::Guest_management *ui;
+    Ui::change_rooms *ui;
+    QSqlQuery query;
     QSqlTableModel *model;
     QSqlQueryModel *query_model;
 };
 
-#endif // GUEST_MANAGEMENT_H
+#endif // CHANGE_ROOMS_H

@@ -35,7 +35,9 @@ SOURCES += \
     dialog_login.cpp \
     dialog_add.cpp \
     dialog_addvip.cpp \
-    dialog_addroom.cpp
+    dialog_addroom.cpp \
+    settle_accounts.cpp \
+    change_rooms.cpp
 
 HEADERS += \
         hotel_management_system.h \
@@ -47,7 +49,9 @@ HEADERS += \
     dialog_login.h \
     dialog_add.h \
     dialog_addvip.h \
-    dialog_addroom.h
+    dialog_addroom.h \
+    settle_accounts.h \
+    change_rooms.h
 
 FORMS += \
         hotel_management_system.ui \
@@ -59,7 +63,9 @@ FORMS += \
     dialog_login.ui \
     dialog_add.ui \
     dialog_addvip.ui \
-    dialog_addroom.ui
+    dialog_addroom.ui \
+    settle_accounts.ui \
+    change_rooms.ui
 
 QT += sql
 
