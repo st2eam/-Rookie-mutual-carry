@@ -5,10 +5,12 @@ release/system_management.o
 release/guest_room_management.o
 release/guest_management.o
 release/report_management.o
-release/consumption_management.o
 release/dialog_login.o
 release/dialog_add.o
 release/dialog_addvip.o
+release/dialog_addroom.o
+release/settle_accounts.o
+release/change_rooms.o
 release/qrc_buttonimage.o
 release/moc_hotel_management_system.o
 release/moc_basic_info.o
@@ -16,7 +18,9 @@ release/moc_system_management.o
 release/moc_guest_room_management.o
 release/moc_guest_management.o
 release/moc_report_management.o
-release/moc_consumption_management.o
 release/moc_dialog_login.o
 release/moc_dialog_add.o
 release/moc_dialog_addvip.o
+release/moc_dialog_addroom.o
+release/moc_settle_accounts.o
+release/moc_change_rooms.o

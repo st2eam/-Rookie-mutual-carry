@@ -23,7 +23,6 @@ class Ui_Dialog_addvip
 {
 public:
     QTableView *tableView;
-    QLineEdit *lineEdit;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_4;
@@ -39,21 +38,18 @@ public:
         tableView = new QTableView(Dialog_addvip);
         tableView->setObjectName(QString::fromUtf8("tableView"));
         tableView->setGeometry(QRect(10, 10, 411, 261));
-        lineEdit = new QLineEdit(Dialog_addvip);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(430, 90, 171, 20));
         pushButton = new QPushButton(Dialog_addvip);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(540, 40, 61, 23));
         pushButton_2 = new QPushButton(Dialog_addvip);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(460, 200, 111, 21));
+        pushButton_2->setGeometry(QRect(460, 180, 111, 21));
         pushButton_4 = new QPushButton(Dialog_addvip);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(520, 250, 75, 23));
         lineEdit_2 = new QLineEdit(Dialog_addvip);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(430, 140, 171, 20));
+        lineEdit_2->setGeometry(QRect(430, 110, 171, 20));
         lineEdit_3 = new QLineEdit(Dialog_addvip);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
         lineEdit_3->setGeometry(QRect(430, 40, 101, 20));
@@ -69,7 +65,6 @@ public:
     void retranslateUi(QDialog *Dialog_addvip)
     {
         Dialog_addvip->setWindowTitle(QApplication::translate("Dialog_addvip", "Dialog", nullptr));
-        lineEdit->setPlaceholderText(QApplication::translate("Dialog_addvip", "id", nullptr));
         pushButton->setText(QApplication::translate("Dialog_addvip", "\346\237\245\350\257\242", nullptr));
         pushButton_2->setText(QApplication::translate("Dialog_addvip", "\345\260\206\351\241\276\345\256\242\346\233\264\346\224\271\344\270\272VIP", nullptr));
         pushButton_4->setText(QApplication::translate("Dialog_addvip", "\345\217\226\346\266\210", nullptr));

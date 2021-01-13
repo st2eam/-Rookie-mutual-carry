@@ -5,10 +5,12 @@ debug/system_management.o
 debug/guest_room_management.o
 debug/guest_management.o
 debug/report_management.o
-debug/consumption_management.o
 debug/dialog_login.o
 debug/dialog_add.o
 debug/dialog_addvip.o
+debug/dialog_addroom.o
+debug/settle_accounts.o
+debug/change_rooms.o
 debug/qrc_buttonimage.o
 debug/moc_hotel_management_system.o
 debug/moc_basic_info.o
@@ -16,7 +18,9 @@ debug/moc_system_management.o
 debug/moc_guest_room_management.o
 debug/moc_guest_management.o
 debug/moc_report_management.o
-debug/moc_consumption_management.o
 debug/moc_dialog_login.o
 debug/moc_dialog_add.o
 debug/moc_dialog_addvip.o
+debug/moc_dialog_addroom.o
+debug/moc_settle_accounts.o
+debug/moc_change_rooms.o

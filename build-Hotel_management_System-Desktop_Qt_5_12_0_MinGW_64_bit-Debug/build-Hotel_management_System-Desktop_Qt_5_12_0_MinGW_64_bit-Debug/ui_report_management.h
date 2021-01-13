@@ -50,7 +50,7 @@ public:
         tabWidget = new QTabWidget(Report_management);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setGeometry(QRect(0, 0, 1035, 706));
-        tabWidget->setTabPosition(QTabWidget::South);
+        tabWidget->setTabPosition(QTabWidget::North);
         tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setDocumentMode(false);
         tabWidget->setTabsClosable(false);

@@ -29,7 +29,6 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QMenuBar *menuBar;
     QMenu *menu;
@@ -48,22 +47,19 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(42, 112, 225, 63));
+        pushButton->setGeometry(QRect(42, 110, 225, 63));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(42, 195, 225, 63));
+        pushButton_2->setGeometry(QRect(42, 200, 225, 63));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(42, 277, 225, 63));
+        pushButton_3->setGeometry(QRect(42, 290, 225, 63));
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(40, 360, 225, 63));
-        pushButton_5 = new QPushButton(centralWidget);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(42, 443, 225, 63));
+        pushButton_4->setGeometry(QRect(40, 380, 225, 63));
         pushButton_6 = new QPushButton(centralWidget);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(40, 525, 225, 63));
+        pushButton_6->setGeometry(QRect(40, 470, 225, 63));
         Hotel_management_System->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Hotel_management_System);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -89,7 +85,6 @@ public:
         pushButton_2->setText(QString());
         pushButton_3->setText(QString());
         pushButton_4->setText(QString());
-        pushButton_5->setText(QString());
         pushButton_6->setText(QString());
         menu->setTitle(QString());
     } // retranslateUi
