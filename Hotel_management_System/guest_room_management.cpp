@@ -58,8 +58,9 @@ Guest_room_management::~Guest_room_management()
 
 void Guest_room_management::on_pushButton_7_clicked()
 {
-    int rowindex = model->rowCount();
-    model->insertRow(rowindex);
+    Dialog_addroom d;
+    d.exec();
+    model->select();
 }
 
 void Guest_room_management::on_pushButton_8_clicked()

@@ -63,6 +63,7 @@ private slots:
 private:
     Ui::Dialog_addvip *ui;
     QSqlTableModel *model;
+    QSqlQueryModel *query_model;
 };
 
 #endif // DIALOG_ADDVIP_H

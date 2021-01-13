@@ -19,7 +19,7 @@ Dialog_addvip::Dialog_addvip(QWidget *parent) :
     {
     qDebug()<<"connect error!";
     }
-
+    query_model = new QSqlQueryModel;
     //创建模型
     model = new QSqlTableModel(this);
     model->setTable("Guest");
@@ -54,13 +54,11 @@ void Dialog_addvip::on_pushButton_2_clicked()
     db.open();
     QSqlQuery query(db);
 
+    QString Sql = "select id,isvip from Guest";
+    query_model->setQuery(Sql);
+    int row = ui->tableView->currentIndex().row();
+    QVariant s1 = query_model->data(query_model->index(row,0));
 
-//    int curRow = ui->tableView->currentIndex().row();
-//    QSqlRecord record = model->record(curRow);
-//    QString s1 = record.value("id").toString();
-//    ui->lineEdit->setText(s1);
-
-    QString s1 = ui->lineEdit->text();//id
     QString s2 = ui->lineEdit_2->text();
 
     QString sql = "update Guest set isvip =:isvip,vipnumber=:vipnumber where id=:id";
@@ -69,9 +67,6 @@ void Dialog_addvip::on_pushButton_2_clicked()
     query.bindValue(":vipnumber",s2);
     query.bindValue(":id",s1);
 
-
-//    QString sql = tr("update Guest set isvip =%1,vipnumber=%2 where id=%3")
-//                                        .arg("yes").arg(s2),arg(s1);
     if(query.exec())
         qDebug() << "添加成功";
     else

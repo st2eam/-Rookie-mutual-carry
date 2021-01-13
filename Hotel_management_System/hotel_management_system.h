@@ -6,7 +6,6 @@
 #include <system_management.h>
 #include <guest_room_management.h>
 #include <guest_management.h>
-#include "consumption_management.h"
 #include <report_management.h>
 
 
@@ -30,8 +29,6 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_6_clicked();
-
-    void on_pushButton_5_clicked();
 
     void on_pushButton_4_clicked();
 

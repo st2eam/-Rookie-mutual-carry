@@ -24,23 +24,6 @@ Guest_management::Guest_management(QWidget *parent) :
     ui->pushButton_13->setIcon(myicon4);
     ui->pushButton_13->setIconSize(QSize(110,70));
 
-
-    QIcon myicon5(tr(":/littlebutton/Registration.png")); //新建QIcon对象
-    ui->pushButton_10->setIcon(myicon5);
-    ui->pushButton_10->setIconSize(QSize(110,70));
-    QIcon myicon6(tr(":/littlebutton/Check_in_slip.png")); //新建QIcon对象
-    ui->pushButton_12->setIcon(myicon6);
-    ui->pushButton_12->setIconSize(QSize(110,70));
-
-
-    QIcon myicon7(tr(":/littlebutton/Registration.png")); //新建QIcon对象
-    ui->pushButton_11->setIcon(myicon7);
-    ui->pushButton_11->setIconSize(QSize(110,70));
-    QIcon myicon8(tr(":/littlebutton/Check_in_slip.png")); //新建QIcon对象
-    ui->pushButton_14->setIcon(myicon8);
-    ui->pushButton_14->setIconSize(QSize(110,70));
-
-
     QIcon myicon10(tr(":/littlebutton/Change_rooms.png")); //新建QIcon对象
     ui->pushButton_16->setIcon(myicon10);
     ui->pushButton_16->setIconSize(QSize(110,70));
@@ -58,8 +41,7 @@ Guest_management::Guest_management(QWidget *parent) :
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("Hotel.db");
-    bool ok = db.open();
-    if(ok)
+    if(db.open())
     {
     qDebug()<<"connect normal";
     }

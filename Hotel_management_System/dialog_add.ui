@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>346</width>
-    <height>277</height>
+    <width>329</width>
+    <height>249</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>50</y>
+     <y>40</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>50</y>
+     <y>40</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>100</y>
+     <y>90</y>
      <width>113</width>
      <height>20</height>
     </rect>
@@ -62,45 +62,13 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>100</y>
+     <y>90</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
    <property name="placeholderText">
     <string>电话号码</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>150</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>退房日期</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>150</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>开始日期</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -127,6 +95,65 @@
    </property>
    <property name="text">
     <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2021</year>
+     <month>1</month>
+     <day>13</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy/MM/dd</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>140</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="dateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>2021</year>
+     <month>1</month>
+     <day>14</day>
+    </datetime>
+   </property>
+   <property name="displayFormat">
+    <string>yyyy/MM/dd</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>180</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>是否为预定用户</string>
    </property>
   </widget>
  </widget>

@@ -44,9 +44,11 @@ System_management::System_management(QWidget *parent) :
     model->setHeaderData(3,Qt::Horizontal,"是否为VIP");
     model->setHeaderData(4,Qt::Horizontal,"VIP号码");
     model->setHeaderData(5,Qt::Horizontal,"入住房间");
-    model->setHeaderData(6,Qt::Horizontal,"入住时间");
-    model->setHeaderData(7,Qt::Horizontal,"离开时间");
-    model->setHeaderData(8,Qt::Horizontal,"应缴金额");
+    model->setHeaderData(6,Qt::Horizontal,"预定入住");
+    model->setHeaderData(7,Qt::Horizontal,"预定离开");
+    model->setHeaderData(8,Qt::Horizontal,"入住时间");
+    model->setHeaderData(9,Qt::Horizontal,"离开时间");
+    model->setHeaderData(10,Qt::Horizontal,"应缴金额");
     ui->tableView->setModel(model);
     ui->tableView->show();
 }

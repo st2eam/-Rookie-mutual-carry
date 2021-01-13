@@ -100,88 +100,6 @@
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>预定转入住</string>
-    </attribute>
-    <widget class="QPushButton" name="pushButton_10">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>240</y>
-       <width>110</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_12">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>360</y>
-       <width>110</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QTableView" name="tableView_2">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>50</y>
-       <width>740</width>
-       <height>580</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_3">
-    <attribute name="title">
-     <string>登记入住</string>
-    </attribute>
-    <widget class="QTableView" name="tableView_3">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>50</y>
-       <width>740</width>
-       <height>580</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_14">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>360</y>
-       <width>110</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_11">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>240</y>
-       <width>110</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_4">
-    <attribute name="title">
      <string>换房管理</string>
     </attribute>
     <widget class="QTableView" name="tableView_4">
@@ -221,7 +139,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_5">
+   <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>退房结帐</string>
     </attribute>

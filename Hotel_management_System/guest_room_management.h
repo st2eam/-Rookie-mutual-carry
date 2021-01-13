@@ -36,6 +36,7 @@
 #include <QVariant>
 #include <QString>
 #include <QSqlError>
+#include <dialog_addroom.h>
 
 
 namespace Ui {

@@ -18,9 +18,6 @@ Hotel_management_System::Hotel_management_System(QWidget *parent) :
     QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
@@ -57,9 +54,6 @@ void Hotel_management_System::on_pushButton_clicked()
     QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
@@ -86,9 +80,6 @@ void Hotel_management_System::on_pushButton_2_clicked()
     QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
@@ -114,9 +105,6 @@ void Hotel_management_System::on_pushButton_3_clicked()
     QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
@@ -142,9 +130,6 @@ void Hotel_management_System::on_pushButton_4_clicked()
     QIcon myicon4(tr(":/button/button/4-1.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
@@ -153,33 +138,6 @@ void Hotel_management_System::on_pushButton_4_clicked()
     Guest_management_window = new Guest_management(this);
     Guest_management_window->show();
     Guest_management_window->move(298,32);
-}
-
-void Hotel_management_System::on_pushButton_5_clicked()
-{
-    QIcon myicon1(tr(":/button/button/1-2.png")); //新建QIcon对象
-    ui->pushButton->setIcon(myicon1);
-    ui->pushButton->setIconSize(QSize(255,63));
-    QIcon myicon2(tr(":/button/button/2-2.png")); //新建QIcon对象
-    ui->pushButton_2->setIcon(myicon2);
-    ui->pushButton_2->setIconSize(QSize(255,63));
-    QIcon myicon3(tr(":/button/button/3-2.png")); //新建QIcon对象
-    ui->pushButton_3->setIcon(myicon3);
-    ui->pushButton_3->setIconSize(QSize(255,63));
-    QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
-    ui->pushButton_4->setIcon(myicon4);
-    ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-1.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
-    QIcon myicon6(tr(":/button/button/6-2.png")); //新建QIcon对象
-    ui->pushButton_6->setIcon(myicon6);
-    ui->pushButton_6->setIconSize(QSize(255,63));
-
-    Consumption_management *Consumption_management_window;
-    Consumption_management_window = new Consumption_management(this);
-    Consumption_management_window->show();
-    Consumption_management_window->move(298,32);
 }
 
 void Hotel_management_System::on_pushButton_6_clicked()
@@ -196,9 +154,6 @@ void Hotel_management_System::on_pushButton_6_clicked()
     QIcon myicon4(tr(":/button/button/4-2.png")); //新建QIcon对象
     ui->pushButton_4->setIcon(myicon4);
     ui->pushButton_4->setIconSize(QSize(255,63));
-    QIcon myicon5(tr(":/button/button/5-2.png")); //新建QIcon对象
-    ui->pushButton_5->setIcon(myicon5);
-    ui->pushButton_5->setIconSize(QSize(255,63));
     QIcon myicon6(tr(":/button/button/6-1.png")); //新建QIcon对象
     ui->pushButton_6->setIcon(myicon6);
     ui->pushButton_6->setIconSize(QSize(255,63));
