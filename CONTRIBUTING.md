@@ -1,3 +1,1 @@
-[Stream][stream]
-
-[stream]：https://github.com/stream12138
+[stream](https://github.com/stream12138)
