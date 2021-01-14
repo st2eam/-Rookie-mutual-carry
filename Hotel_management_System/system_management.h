@@ -61,6 +61,7 @@ private slots:
 private:
     Ui::System_management *ui;
     QSqlTableModel *model;
+    QSqlQueryModel *query_model;
 };
 
 #endif // SYSTEM_MANAGEMENT_H

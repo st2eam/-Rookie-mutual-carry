@@ -32,6 +32,8 @@ Dialog_addvip::Dialog_addvip(QWidget *parent) :
     model->removeColumn(5);
     model->removeColumn(5);
     model->removeColumn(5);
+    model->removeColumn(5);
+    model->removeColumn(5);
     model->removeColumn(5); //不显示第二列,如果这时添加记录，则该属性的值添加不上
     model->setHeaderData(0,Qt::Horizontal,"非会员名字");
     model->setHeaderData(1,Qt::Horizontal,"个人ID");
@@ -54,17 +56,20 @@ void Dialog_addvip::on_pushButton_2_clicked()
     db.open();
     QSqlQuery query(db);
 
-    QString Sql = "select id,isvip from Guest";
-    query_model->setQuery(Sql);
+    query_model->setQuery("SELECT * FROM Guest WHERE isvip LIKE '%no%'");
+
     int row = ui->tableView->currentIndex().row();
-    QVariant s1 = query_model->data(query_model->index(row,0));
-
+    QVariant s1 = query_model->data(query_model->index(row,1));
+    double cost = (query_model->data(query_model->index(row,10))).toDouble();
     QString s2 = ui->lineEdit_2->text();
+    double vipcost = 0.9*cost;
+        qDebug()<<row<<s1<<cost<<vipcost;
 
-    QString sql = "update Guest set isvip =:isvip,vipnumber=:vipnumber where id=:id";
+    QString sql = "update Guest set isvip =:isvip,vipnumber=:vipnumber,cost=:cost where id=:id";
     query.prepare(sql);//sql语句预处理
     query.bindValue(":isvip","yes");
     query.bindValue(":vipnumber",s2);
+    query.bindValue(":cost",vipcost);
     query.bindValue(":id",s1);
 
     if(query.exec())

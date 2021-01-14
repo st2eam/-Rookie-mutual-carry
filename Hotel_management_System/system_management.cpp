@@ -32,7 +32,7 @@ System_management::System_management(QWidget *parent) :
     {
     qDebug()<<"connect error!";
     }
-
+    query_model = new QSqlQueryModel;
     //创建模型
     model = new QSqlTableModel(this);
     model->setTable("Guest");
@@ -56,6 +56,29 @@ System_management::System_management(QWidget *parent) :
 System_management::~System_management()
 {
     delete ui;
+}
+
+bool db_update(QString room_number){
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Hotel.db");
+    if(db.open()){
+      qDebug() << "connect normal";
+    }else{
+      qDebug() << "connect error!";
+    }
+    QSqlQuery query(db);
+    QString sql = "update Hotel_room set guest=?,start_date=?,ending_date=?,book_start_date=?,book_ending_date=? where room_number=?";
+    query.prepare(sql);
+    query.addBindValue("");
+    query.addBindValue("");
+    query.addBindValue("");
+    query.addBindValue("");
+    query.addBindValue("");
+    query.addBindValue(room_number);
+    bool flag = query.exec();
+    qDebug() << "执行添加影响数据行" <<flag;
+    return flag;
 }
 
 //添加
@@ -85,6 +108,13 @@ void System_management::on_pushButton_6_clicked()
     int rowIndex = ui->tableView->currentIndex().row();
     //qDebug() << rowIndex;
     model->removeRow(rowIndex);
+    QString Sql = "select bookedroom from Guest";
+    query_model->setQuery(Sql);
+
+    int row = ui->tableView->currentIndex().row();
+    QVariant s1 = query_model->data(query_model->index(row,0));
+    db_update(s1.toString());
+
     int ok = QMessageBox::warning(this,tr("删除当前行!"),tr("你确定删除当前行吗？"),
                                  QMessageBox::Yes,QMessageBox::No);
 
@@ -94,3 +124,4 @@ void System_management::on_pushButton_6_clicked()
       }
     else model->submitAll(); //否则提交，在数据库中删除该行
 }
+

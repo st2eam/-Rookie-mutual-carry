@@ -9,6 +9,7 @@ Dialog_add::Dialog_add(QWidget *parent) :
 {
     ui->setupUi(this);
     query_model = new QSqlQueryModel;
+    combox_Binddata();
 }
 
 Dialog_add::~Dialog_add()
@@ -67,17 +68,23 @@ bool db_update(QString guest,QString start_date,QString ending_date,QString book
 }
 void Dialog_add::on_pushButton_clicked()
 {
+    query_model->setQuery("SELECT * FROM Hotel_room WHERE guest = ''");
     QDate time = ui->dateEdit->date();
     QDate time_2 = ui->dateEdit_2->date();
     qint64 Time_difference = time.daysTo(time_2);
 
+    int index = ui->comboBox->currentIndex();
     QString account = ui->lineEdit->text();
     QString id = ui->lineEdit_2->text();
     QString telephone = ui->lineEdit_3->text();
-    QString room = ui->lineEdit_4->text();
+    QString room = ui->comboBox->itemText(index);
     QString start = ui->dateEdit->text();
     QString end = ui->dateEdit_2->text();
-    double price = Time_difference*180;
+    double cost = (query_model->data(query_model->index(index,8))).toDouble();
+
+    double price = Time_difference*cost;
+
+    qDebug()<<index<<cost<<price;
     if(ui->checkBox->isChecked())
     {
     db_insert(account,id,telephone,"no","",room,start,end,"","",price);
@@ -97,3 +104,11 @@ void Dialog_add::on_pushButton_2_clicked()
     this->reject();
 }
 
+void Dialog_add::combox_Binddata()
+{
+    query_model->setQuery("SELECT * FROM Hotel_room WHERE guest = ''");
+    for (int i = 0; i < query_model->rowCount(); i++) {
+        QVariant text = query_model->data(query_model->index(i,0));
+        ui->comboBox->addItem(text.toString());
+    }
+}

@@ -247,13 +247,14 @@ void Basic_info::on_pushButton_9_clicked()
     }else{
       qDebug() << "connect error!";
     }
-    QString sql = "select id,isvip from Guest";
-    query_model->setQuery(sql);
+    query_model->setQuery("SELECT * FROM Guest WHERE isvip LIKE '%yes%'");
     int row = ui->tableView_3->currentIndex().row();
-    QVariant id = query_model->data(query_model->index(row,0));
-    qDebug()<<row<<id;
+    QVariant id = query_model->data(query_model->index(row,1));
+    double vipcost = (query_model->data(query_model->index(row,10))).toDouble();
+    double cost = vipcost/0.9;
+    qDebug()<<row<<id<<cost;
     QSqlQuery query(db);
-    QString sql_2 = "update Guest set isvip=?,vipnumber =? where id=?";
+    QString sql_2 = "update Guest set isvip=?,vipnumber =?,cost=? where id=?";
     int ok = QMessageBox::warning(this,tr("删除该会员"),tr("你确定删除该会员吗？"),
                                  QMessageBox::Yes,QMessageBox::No);
 
@@ -262,6 +263,7 @@ void Basic_info::on_pushButton_9_clicked()
         query.prepare(sql_2);
         query.addBindValue("no");
         query.addBindValue("");
+        query.addBindValue(cost);
         query.addBindValue(id);
         query.exec();
       }

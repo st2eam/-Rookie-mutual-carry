@@ -17,6 +17,7 @@ class Dialog_add : public QDialog
 
 public:
     explicit Dialog_add(QWidget *parent = nullptr);
+    void combox_Binddata();
     ~Dialog_add();
 
 private slots:

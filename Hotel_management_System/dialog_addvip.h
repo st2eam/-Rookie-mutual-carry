@@ -10,7 +10,6 @@
 #include <QLabel>
 #include <QDropEvent>
 #include <QDragEnterEvent>
-#include <QDialog>
 #include <QColorDialog>
 #include <QFileDialog>
 #include <QFontDialog>
