@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>590</width>
-    <height>533</height>
+    <width>427</width>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,20 +16,115 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>470</y>
-     <width>81</width>
-     <height>41</height>
+     <x>170</x>
+     <y>380</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>292</width>
+     <height>247</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="4" column="2">
+     <widget class="QLineEdit" name="bookstart"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>电话</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="id"/>
+    </item>
+    <item row="6" column="2">
+     <widget class="QLineEdit" name="price"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>入住时间</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="room"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="name"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="phone"/>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLineEdit" name="bookending"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>退房时间</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>支付金额</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>姓名</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>房间号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>id</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>40</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>微软雅黑 Light</family>
-     <pointsize>12</pointsize>
+     <family>Adobe Devanagari</family>
+     <pointsize>11</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>打印</string>
+    <string>退房</string>
    </property>
   </widget>
  </widget>

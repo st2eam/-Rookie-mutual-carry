@@ -35,24 +35,11 @@
     <attribute name="title">
      <string>预定管理</string>
     </attribute>
-    <widget class="QPushButton" name="pushButton_7">
-     <property name="geometry">
-      <rect>
-       <x>850</x>
-       <y>120</y>
-       <width>110</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>360</y>
+       <x>860</x>
+       <y>300</y>
        <width>110</width>
        <height>70</height>
       </rect>
@@ -64,8 +51,8 @@
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>240</y>
+       <x>860</x>
+       <y>180</y>
        <width>110</width>
        <height>70</height>
       </rect>
@@ -87,8 +74,8 @@
     <widget class="QPushButton" name="pushButton_13">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>480</y>
+       <x>860</x>
+       <y>420</y>
        <width>110</width>
        <height>70</height>
       </rect>
