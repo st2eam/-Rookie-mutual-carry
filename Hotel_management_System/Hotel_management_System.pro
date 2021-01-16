@@ -25,8 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        hotel_management_system.cpp \
+    main.cpp \
+    hotel_management_system.cpp \
     basic_info.cpp \
     system_management.cpp \
     guest_room_management.cpp \
@@ -38,10 +38,10 @@ SOURCES += \
     dialog_addroom.cpp \
     settle_accounts.cpp \
     change_rooms.cpp \
-    ruzhudan.cpp
+    entry.cpp
 
 HEADERS += \
-        hotel_management_system.h \
+    hotel_management_system.h \
     basic_info.h \
     system_management.h \
     guest_room_management.h \
@@ -53,10 +53,10 @@ HEADERS += \
     dialog_addroom.h \
     settle_accounts.h \
     change_rooms.h \
-    ruzhudan.h
+    entry.h
 
 FORMS += \
-        hotel_management_system.ui \
+    hotel_management_system.ui \
     basic_info.ui \
     system_management.ui \
     guest_room_management.ui \
@@ -68,7 +68,7 @@ FORMS += \
     dialog_addroom.ui \
     settle_accounts.ui \
     change_rooms.ui \
-    ruzhudan.ui
+    entry.ui
 
 QT += sql
 

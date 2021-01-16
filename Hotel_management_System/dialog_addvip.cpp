@@ -63,7 +63,6 @@ void Dialog_addvip::on_pushButton_2_clicked()
     double cost = (query_model->data(query_model->index(row,10))).toDouble();
     QString s2 = ui->lineEdit_2->text();
     double vipcost = 0.9*cost;
-        qDebug()<<row<<s1<<cost<<vipcost;
 
     QString sql = "update Guest set isvip =:isvip,vipnumber=:vipnumber,cost=:cost where id=:id";
     query.prepare(sql);//sql语句预处理

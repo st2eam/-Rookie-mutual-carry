@@ -87,8 +87,6 @@ void System_management::on_pushButton_4_clicked()
     Dialog_add d;
     d.exec();
     model->select();
-//    int rowindex = model->rowCount();
-//    model->insertRow(rowindex);
 }
 
 void System_management::on_pushButton_5_clicked()
@@ -115,7 +113,7 @@ void System_management::on_pushButton_6_clicked()
     QVariant s1 = query_model->data(query_model->index(row,0));
     db_update(s1.toString());
 
-    int ok = QMessageBox::warning(this,tr("删除当前行!"),tr("你确定删除当前行吗？"),
+    int ok = QMessageBox::warning(this,tr("删除当前顾客!"),tr("你确定删除当前顾客吗？"),
                                  QMessageBox::Yes,QMessageBox::No);
 
     if(ok == QMessageBox::No)
