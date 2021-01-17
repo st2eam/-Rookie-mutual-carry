@@ -49,13 +49,26 @@ class change_rooms : public QDialog
 
 public:
     explicit change_rooms(QWidget *parent = nullptr);
+    void combox_Binddata();
+    void string_1(QString _guest,QString _start_date,QString _ending_date,QString _bookstart,QString _bookend,QString s1);
+    QString guest;
+    QString start_date;
+    QString ending_date;
+    QString bookstart;
+    QString bookend;
     ~change_rooms();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::change_rooms *ui;
     QSqlQuery query;
     QSqlTableModel *model;
     QSqlQueryModel *query_model;
+
 };
 
 #endif // CHANGE_ROOMS_H

@@ -100,19 +100,34 @@ void System_management::on_pushButton_5_clicked()
         QMessageBox::warning(this,"数据库错误",tr("数据库错误: %1").arg(model->lastError().text()));
     }
 }
-
+//删除
 void System_management::on_pushButton_6_clicked()
 {
+
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Hotel.db");
+    db.open();
+
     int rowIndex = ui->tableView->currentIndex().row();
     //qDebug() << rowIndex;
-    model->removeRow(rowIndex);
-    QString Sql = "select bookedroom from Guest";
+
+    QString Sql = "select * from Guest";
     query_model->setQuery(Sql);
 
     int row = ui->tableView->currentIndex().row();
-    QVariant s1 = query_model->data(query_model->index(row,0));
+    QVariant s1 = query_model->data(query_model->index(row,5));
+    QVariant _price = query_model->data(query_model->index(row,10));
+    QVariant _end = query_model->data(query_model->index(row,9));
     db_update(s1.toString());
 
+    double price = _price.toDouble();
+    QString end = _end.toString();
+    model->removeRow(rowIndex);
+
+    qDebug()<<s1<<_price<<_end;
+    QSqlQuery query_2(db);;
+    QString sql_2 = QString("update Income set income = income -'%1' where enddate like '%2'").arg(price).arg("%"+end+"%");
+    query_2.exec(sql_2);
     int ok = QMessageBox::warning(this,tr("删除当前顾客!"),tr("你确定删除当前顾客吗？"),
                                  QMessageBox::Yes,QMessageBox::No);
 

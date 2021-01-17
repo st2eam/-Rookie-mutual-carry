@@ -37,8 +37,10 @@
 #include <QString>
 #include <QSqlError>
 #include <settle_accounts.h>
-#include "change_rooms.h"
-#include "ruzhudan.h"
+#include <change_rooms.h>
+#include <entry.h>
+#include <QPrinter>
+#include <QPrintDialog>
 
 
 namespace Ui {
@@ -52,9 +54,6 @@ class Guest_management : public QWidget
 public:
     explicit Guest_management(QWidget *parent = nullptr);
     ~Guest_management();
-    bool db_update(QString guest,QString start_date,QString ending_date,QString bookstart,QString bookend,QString room_number);
-    bool db_update_2(QString room_number,QString startdate,QString endingdate);
-
 
 private slots:
     void on_pushButton_18_clicked();
@@ -63,9 +62,13 @@ private slots:
 
     void on_pushButton_16_clicked();
 
-    void on_pushButton_9_clicked();
-
     void on_pushButton_8_clicked();
+
+    bool db_update(QString room_number);
+
+    bool db_update_2(QString room_number,QString startdate,QString endingdate);
+
+    bool db_update_3(QString room_number);
 
     void on_pushButton_13_clicked();
 
@@ -75,8 +78,6 @@ private:
     Ui::Guest_management *ui;
     QSqlTableModel *model;
     QSqlQueryModel *query_model;
-    QSqlQuery sql_query;
-
 };
 
 #endif // GUEST_MANAGEMENT_H

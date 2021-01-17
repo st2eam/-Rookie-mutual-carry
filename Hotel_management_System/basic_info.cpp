@@ -252,7 +252,6 @@ void Basic_info::on_pushButton_9_clicked()
     QVariant id = query_model->data(query_model->index(row,1));
     double vipcost = (query_model->data(query_model->index(row,10))).toDouble();
     double cost = vipcost/0.9;
-    qDebug()<<row<<id<<cost;
     QSqlQuery query(db);
     QString sql_2 = "update Guest set isvip=?,vipnumber =?,cost=? where id=?";
     int ok = QMessageBox::warning(this,tr("删除该会员"),tr("你确定删除该会员吗？"),

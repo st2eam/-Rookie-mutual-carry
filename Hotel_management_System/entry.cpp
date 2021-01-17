@@ -1,22 +1,22 @@
-#include "settle_accounts.h"
-#include "ui_settle_accounts.h"
+#include "entry.h"
+#include "ui_entry.h"
 
 #include <QFileDialog>
 #include <QPrinter>
 
-Settle_accounts::Settle_accounts(QWidget *parent) :
+Entry::Entry(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Settle_accounts)
+    ui(new Ui::Entry)
 {
     ui->setupUi(this);
 }
 
-Settle_accounts::~Settle_accounts()
+Entry::~Entry()
 {
     delete ui;
 }
 
-void Settle_accounts::data_1(QString _roomtype,QString _start_date,QString _ending_date,QString _guest,QString _tpnumber,QString _vipnumber,double _price)
+void Entry::data_1(QString _roomtype,QString _start_date,QString _ending_date,QString _guest,QString _tpnumber,QString _vipnumber,double _price)
 {
     roomtype = _roomtype;
     start_date = _start_date;
@@ -27,7 +27,7 @@ void Settle_accounts::data_1(QString _roomtype,QString _start_date,QString _endi
     price = _price;
 }
 
-void Settle_accounts::Binddata()
+void Entry::Binddata()
 {
     ui->label->setText(roomtype);
     ui->label_2->setText(start_date);
@@ -61,24 +61,13 @@ void Settle_accounts::Binddata()
     }
 }
 
-
-void Settle_accounts::on_pushButton_2_clicked()
-{
-    this->accept();
-}
-
-void Settle_accounts::on_pushButton_3_clicked()
-{
-    this->reject();
-}
-
-void Settle_accounts::on_pushButton_clicked()
+void Entry::on_pushButton_clicked()
 {
     // 生成PDF文件
         QPrinter printer;
         QPixmap image;
     //    QPainter painter(&printer);
-        image = image.grabWidget(this,30,20,301,451);
+        image = image.grabWidget(this,10,10,321,421);
         QString fileName = QFileDialog::getSaveFileName(this, tr("导出PDF文件"),
                                                         QString(), "*.pdf");
         if (!fileName.isEmpty()) {

@@ -1,5 +1,12 @@
+#include <QtCharts>
+#include <QChartView>
+#include <QLogValueAxis>
+#include <QValueAxis>
+
 #ifndef REPORT_MANAGEMENT_H
 #define REPORT_MANAGEMENT_H
+
+QT_CHARTS_USE_NAMESPACE
 
 #include <QMainWindow>
 #include <QWizardPage>
@@ -36,6 +43,12 @@
 #include <QVariant>
 #include <QString>
 #include <QSqlError>
+#include <QDate>
+#include <QDateEdit>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QFileDialog>
+#include <QPainter>
 
 
 namespace Ui {
@@ -48,10 +61,19 @@ class Report_management : public QWidget
 
 public:
     explicit Report_management(QWidget *parent = nullptr);
+    void init_charts();
     ~Report_management();
 
 private slots:
     void on_tabWidget_currentChanged(int index);
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
     void on_pushButton_10_clicked();
 
@@ -68,6 +90,7 @@ private slots:
 private:
     Ui::Report_management *ui;
     QSqlTableModel *model;
+    QSqlQueryModel *query_model;
 };
 
 #endif // REPORT_MANAGEMENT_H

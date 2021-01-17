@@ -7,7 +7,6 @@ Dialog_addroom::Dialog_addroom(QWidget *parent) :
     ui(new Ui::Dialog_addroom)
 {
     ui->setupUi(this);
-    query_model = new QSqlQueryModel;
     combox_Binddata();
 }
 
@@ -51,7 +50,7 @@ void Dialog_addroom::on_pushButton_clicked()
     }else{
       qDebug() << "connect error!";
     }
-
+    query_model = new QSqlQueryModel;
     QString sql = "select room_type,price from Room_type";
     query_model->setQuery(sql);
     int index = ui->comboBox->currentIndex();
@@ -77,6 +76,7 @@ void Dialog_addroom::on_pushButton_2_clicked()
 
 void Dialog_addroom::combox_Binddata()
 {
+    query_model = new QSqlQueryModel;
     QString sql = "select room_type,price from Room_type";
     query_model->setQuery(sql);
     for (int i = 0; i < query_model->rowCount(); i++) {

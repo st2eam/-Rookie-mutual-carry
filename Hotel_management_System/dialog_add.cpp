@@ -9,6 +9,8 @@ Dialog_add::Dialog_add(QWidget *parent) :
 {
     ui->setupUi(this);
     query_model = new QSqlQueryModel;
+    ui->dateEdit->setDateTime(QDateTime::currentDateTime());
+    ui->dateEdit_2->setDateTime(QDateTime::currentDateTime().addDays(1));
     combox_Binddata();
 }
 
@@ -68,6 +70,9 @@ bool db_update(QString guest,QString start_date,QString ending_date,QString book
 }
 void Dialog_add::on_pushButton_clicked()
 {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Hotel.db");
+    db.open();
     query_model->setQuery("SELECT * FROM Hotel_room WHERE guest = ''");
     QDate time = ui->dateEdit->date();
     QDate time_2 = ui->dateEdit_2->date();
@@ -84,7 +89,10 @@ void Dialog_add::on_pushButton_clicked()
 
     double price = Time_difference*cost;
 
-    qDebug()<<index<<cost<<price;
+    QSqlQuery query_2(db);
+    QString sql_2 = QString("update Income set income=income+'%1' where enddate='%2'").arg(price).arg(end);
+    query_2.exec(sql_2);
+
     if(ui->checkBox->isChecked())
     {
     db_insert(account,id,telephone,"no","",room,start,end,"","",price);

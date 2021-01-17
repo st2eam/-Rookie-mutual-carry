@@ -29,7 +29,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>4</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -126,6 +126,32 @@
       <string/>
      </property>
     </widget>
+    <widget class="QDateEdit" name="dateEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>120</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/MM/dd</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>显示当日</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_4">
     <attribute name="title">
@@ -152,6 +178,32 @@
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>显示当日</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>120</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/MM/dd</string>
      </property>
     </widget>
    </widget>
@@ -182,21 +234,37 @@
       <string/>
      </property>
     </widget>
+    <widget class="QDateEdit" name="dateEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>120</y>
+       <width>110</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/MM/dd</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>显示当日</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_6">
     <attribute name="title">
      <string>当日财务进帐报表</string>
     </attribute>
-    <widget class="QTableView" name="tableView_7">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>50</y>
-       <width>740</width>
-       <height>580</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_15">
      <property name="geometry">
       <rect>
@@ -210,9 +278,133 @@
       <string/>
      </property>
     </widget>
+    <widget class="QChartView" name="chartView" native="true">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>740</width>
+       <height>580</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>171</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2021</year>
+       <month>1</month>
+       <day>18</day>
+      </datetime>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/MM/dd</string>
+     </property>
+     <property name="date">
+      <date>
+       <year>2021</year>
+       <month>1</month>
+       <day>18</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>128</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2021</year>
+       <month>1</month>
+       <day>9</day>
+      </datetime>
+     </property>
+     <property name="time">
+      <time>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+      </time>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/MM/dd</string>
+     </property>
+     <property name="date">
+      <date>
+       <year>2021</year>
+       <month>1</month>
+       <day>9</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>829</x>
+       <y>128</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始日期</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>829</x>
+       <y>171</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结束日期</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>刷新</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QWidget</extends>
+   <header location="global">qchartview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
